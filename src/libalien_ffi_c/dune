@@ -1,0 +1,8 @@
+
+(library
+ (name alien_ffi_c)
+ (public_name alien_ffi.c)
+ (library_flags :standard -linkall)
+ (foreign_stubs
+  (language c)
+  (names caml_ba caml_custom caml_values)))

@@ -1,0 +1,25 @@
+
+(data_only_dirs libalien_ffi_rs)
+
+(library
+ (name alien_ffi)
+ (public_name alien_ffi)
+ (modules arena)
+ (libraries alien_ffi.c bigstring unix threads)
+ (library_flags :standard -linkall))
+
+(library
+ (name alien_ffi_tests)
+ (modules default)
+ (libraries alien_ffi)
+ (library_flags :standard -linkall)
+ (foreign_archives alien_ffi_rs))
+
+(rule
+ (targets libalien_ffi_rs.a dllalien_ffi_rs.so)
+ (deps (source_tree libalien_ffi_rs))
+ (action
+  (bash
+   "\nmake -C libalien_ffi_rs\n
+    \ncp libalien_ffi_rs/target/debug/libalien_ffi.a libalien_ffi_rs.a\n
+    \ncp libalien_ffi_rs/target/debug/libalien_ffi.so dllalien_ffi_rs.so\n")))
