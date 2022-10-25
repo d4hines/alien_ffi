@@ -1,10 +1,10 @@
 opam-version: "2.0"
-version: "0.2"
-maintainer: "edward.tate@nomadic-labs.com"
+version: "0.3"
+maintainer: "et4te@0fx.io"
 authors: ["Edward Tate"]
-homepage: "https://gitlab.com/et4te/alien_ffi"
-bug-reports: "https://gitlab.com/et4te/alien_ffi/issues"
-dev-repo: "https://gitlab.com/et4te/alien_ffi.git"
+homepage: "https://github.com/zfxlabs/alien_ffi"
+bug-reports: "https://github.com/zfxlabs/alien_ffi/issues"
+dev-repo: "https://github.com/zfxlabs/alien_ffi.git"
 license: "MIT"
 build: [
   [ "dune" "build" "-p" name "-j" jobs ]

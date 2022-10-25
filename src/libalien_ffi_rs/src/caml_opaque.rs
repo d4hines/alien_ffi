@@ -61,6 +61,12 @@ pub fn acquire<T>(v: Value) -> &'static T {
     unsafe { data_ptr.as_ref().unwrap() }
 }
 
+pub fn acquire_mut<T>(v: Value) -> &'static mut T {
+    let data_ptr = unsafe { get_custom_data(v) as *mut *mut Cvoid };
+    let data_ptr = unsafe { (*data_ptr) as *mut T };
+    unsafe { data_ptr.as_mut().unwrap() }
+}
+
 //
 
 pub extern fn finalize<T>(v: Value) {
