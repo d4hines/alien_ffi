@@ -1,9 +1,9 @@
 [package]
 name = "alien_ffi"
 version = "0.1.0"
-authors = [ "Edward Tate <edward.tate@nomadic-labs.com>" ]
+authors = [ "Edward Tate <et4te@0fx.io>" ]
 description = "An FFI stub for OCaml."
-repository = "https://gitlab.com/et4te/alien_ffi"
+repository = "https://github.com/zfxlabs/alien_ffi"
 license = "MIT"
 
 [lib]

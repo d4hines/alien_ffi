@@ -1,4 +1,3 @@
-
 (data_only_dirs libalien_ffi_rs)
 
 (library
@@ -21,5 +20,5 @@
  (action
   (bash
    "\nmake -C libalien_ffi_rs\n
-    \ncp libalien_ffi_rs/target/debug/libalien_ffi.a libalien_ffi_rs.a\n
-    \ncp libalien_ffi_rs/target/debug/libalien_ffi.so dllalien_ffi_rs.so\n")))
+    \ncp libalien_ffi_rs/target/release/libalien_ffi.a libalien_ffi_rs.a\n
+    \ncp libalien_ffi_rs/target/release/libalien_ffi.so dllalien_ffi_rs.so\n")))

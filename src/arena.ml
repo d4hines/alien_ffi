@@ -1,6 +1,5 @@
 
-(* A typed arena is allocated not as an opaque type but as a
-*)
+(* A typed arena is allocated not as an opaque type but as a Bigstring.t *)
 
 type caml_external_memory = Bigstring.t
 
