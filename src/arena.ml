@@ -11,3 +11,4 @@ type t = caml_external_memory
 
 external alloc : unit -> t = "arena_alloc"
 external free : t -> unit = "arena_free"
+

@@ -3,7 +3,7 @@
 (library
  (name alien_ffi)
  (public_name alien_ffi)
- (modules arena)
+ (modules arena bench interface)
  (libraries alien_ffi.c bigstring unix threads)
  (library_flags :standard -linkall))
 
