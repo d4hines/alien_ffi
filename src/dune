@@ -15,10 +15,10 @@
  (foreign_archives alien_ffi_rs))
 
 (rule
- (targets libalien_ffi_rs.a dllalien_ffi_rs.so)
+ (targets libalien_ffi_rs.a dllalien_ffi_rs.dylib)
  (deps (source_tree libalien_ffi_rs))
  (action
   (bash
    "\nmake -C libalien_ffi_rs\n
-    \ncp libalien_ffi_rs/target/release/libalien_ffi.a libalien_ffi_rs.a\n
-    \ncp libalien_ffi_rs/target/release/libalien_ffi.so dllalien_ffi_rs.so\n")))
+    \ncp libalien_ffi_rs/target/debug/libalien_ffi.a libalien_ffi_rs.a\n
+    \ncp libalien_ffi_rs/target/debug/libalien_ffi.dylib dllalien_ffi_rs.dylib\n")))

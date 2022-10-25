@@ -1,4 +1,4 @@
-
-(tests
- (names simple)
- (libraries alcotest alien_ffi_tests))
+;; 
+;; (tests
+;;  (names simple)
+;;  (libraries alcotest alien_ffi_tests))
