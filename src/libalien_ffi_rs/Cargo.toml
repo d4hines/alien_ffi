@@ -1,5 +1,5 @@
 [package]
-name = "alien_ffi"
+name = "libalien_ffi_rs"
 version = "0.1.0"
 authors = [ "Edward Tate <et4te@0fx.io>" ]
 description = "An FFI stub for OCaml."
