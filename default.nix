@@ -16,11 +16,11 @@
   libalien_ffi_rs = pkgs.rustPlatform.buildRustPackage {
     pname = "libalien_ffi_rs";
     version = "0.0.1";
-    src = ./src/libalien_ffi_rs/.;
+    src = ./.;
     cargoBuildFlags = "-p libalien_ffi_rs";
     
     cargoLock = {
-      lockFile = ./src/libalien_ffi_rs/Cargo.lock;
+      lockFile = ./Cargo.lock;
     };
     
     nativeBuildInputs = [ pkgs.pkg-config ];

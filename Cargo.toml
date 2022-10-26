@@ -7,6 +7,7 @@ repository = "https://github.com/zfxlabs/alien_ffi"
 license = "MIT"
 
 [lib]
+path = "./src/libalien_ffi_rs/src/lib.rs"
 crate-type = [ "rlib", "staticlib", "cdylib" ]
 
 [dependencies]
