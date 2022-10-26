@@ -25,4 +25,22 @@
     
     nativeBuildInputs = [ pkgs.pkg-config ];
   };
+
+  alien_ffi = pkgs.ocaml-ng.ocamlPackages_5_0.buildDunePackage rec {
+    pname = "alien_ffi";
+    version = "0.0.1-dev";
+    src = ./src/.;
+
+    buildInputs = [
+      pkgs.ocaml-ng.ocamlPackages_5_0.bigstring
+    ];
+
+    buildPhase = ''
+      runHook preBuild
+      dune build -p ${pname}
+      runHook postBuild
+    '';
+
+    isLibrary = true;
+  };
 }

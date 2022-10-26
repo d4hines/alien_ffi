@@ -22,9 +22,10 @@
         packages = {
           libalien_ffi_c = code.libalien_ffi_c;
           libalien_ffi_rs = code.libalien_ffi_rs;
+          alien_ffi = code.alien_ffi;
           all = pkgs.symlinkJoin {
             name = "all";
-            paths = with code; [ libalien_ffi_c libalien_ffi_rs ];
+            paths = with code; [ alien_ffi libalien_ffi_c libalien_ffi_rs ];
           };
           default = packages.all;
         };
