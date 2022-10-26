@@ -1,4 +1,15 @@
 
-This is a set of functions for interfacing between OCaml and Rust with the sole purpose of never copying any data between the two.
+# alien_ffi
 
-The idea is not to provide a safe interface which tracks GC roots but rather to ensure that data is never copied in order to avoid potential attacks whilst binding cryptographic primitives.
+## Introduction
+
+`alien_ffi` is an OCaml FFI providing a set of features for using external memory objects allocated in `rust` from `ocaml` in order to reduce copying between the two. 
+
+## Building
+
+The project can be built by using:
+```
+$ nix build .
+```
+
+Which will produce a set of artifacts in `result/lib`.
