@@ -25,7 +25,7 @@
           alien_ffi = code.alien_ffi;
           all = pkgs.symlinkJoin {
             name = "all";
-            paths = with code; [ alien_ffi libalien_ffi_c libalien_ffi_rs ];
+            paths = with code; [ libalien_ffi_c libalien_ffi_rs (code.alien_ffi pkgs.ocaml-ng.ocamlPackages_5_0) ];
           };
           default = packages.all;
         };

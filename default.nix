@@ -26,21 +26,14 @@
     nativeBuildInputs = [ pkgs.pkg-config ];
   };
 
-  alien_ffi = pkgs.ocaml-ng.ocamlPackages_5_0.buildDunePackage rec {
+  alien_ffi = ocamlPackages: with ocamlPackages; buildDunePackage {
     pname = "alien_ffi";
-    version = "0.0.1-dev";
-    src = ./src/.;
+    version = "0.0.1";
 
-    buildInputs = [
-      pkgs.ocaml-ng.ocamlPackages_5_0.bigstring
+    src = ./src;
+
+    propagatedBuildInputs = [
+      bigstring
     ];
-
-    buildPhase = ''
-      runHook preBuild
-      dune build -p ${pname}
-      runHook postBuild
-    '';
-
-    isLibrary = true;
   };
 }
