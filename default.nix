@@ -4,7 +4,7 @@
     name = "libalien_ffi_c";
     version = "0.0.1";
     src = ./src/libalien_ffi_c/.;
-    buildInputs = [ pkgs.ocaml-ng.ocamlPackages_5_0.ocaml ];
+    buildInputs = [ pkgs.ocaml-ng.ocamlPackages_5_00.ocaml ];
     buildPhase = "make";
     installPhase = ''
       mkdir -p $out/lib
